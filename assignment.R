@@ -15,3 +15,12 @@
 
 # вам могут пригодиться функции table, sort, tolower, names -- посмотрите документацию, чтобы понять, как они работают
 
+count_words <- function(my_text) {
+  tolower(my_text)
+  my_low_text <- tolower(my_text)
+  table(my_low_text)
+  sort(table(my_low_text), decreasing = TRUE)
+  text_sorted <- names(sort(table(my_low_text), decreasing = TRUE))
+  n <- 10
+  text_sorted[1:n]
+} 
